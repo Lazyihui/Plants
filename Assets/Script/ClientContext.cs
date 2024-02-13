@@ -16,8 +16,7 @@ public class MainContext : MonoBehaviour {
         assetsContext = new AssetsContext();
     }
 
-    public void Inject(Canvas canvas, AssetsContext assetsContext) {
-        this.assetsContext = assetsContext;
+    public void Inject(Canvas canvas) {
         gameBusiness.Inject(uiContext, assetsContext);
         uiContext.Inject(canvas, assetsContext);
     }
