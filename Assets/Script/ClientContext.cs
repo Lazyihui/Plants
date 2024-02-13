@@ -2,18 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ClientContext
+public class MainContext : MonoBehaviour {
 
-{
+    public GameContext gameBusiness;
+    public UIContext uiContext;
+
+    public AssetsContext assetsContext;
 
 
-    public ClientContext()
-    {
-
+    public MainContext() {
+        gameBusiness = new GameContext();
+        uiContext = new UIContext();
+        assetsContext = new AssetsContext();
     }
 
-    public void Inject()
-    {
-
+    public void Inject(Canvas canvas, AssetsContext assetsContext) {
+        this.assetsContext = assetsContext;
+        gameBusiness.Inject(uiContext, assetsContext);
+        uiContext.Inject(canvas, assetsContext);
     }
 }
