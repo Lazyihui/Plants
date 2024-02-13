@@ -9,6 +9,9 @@ public class UIContext {
 
     public AssetsContext assetsContext;
 
+    public UIContext() {
+    }
+
     public void Inject(Canvas canvas,AssetsContext assetsContext){
         this.canvas = canvas;
         this.assetsContext = assetsContext;

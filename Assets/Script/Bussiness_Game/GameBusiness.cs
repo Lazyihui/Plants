@@ -3,7 +3,6 @@ using UnityEngine;
 public static class GameBusiness {
     public static void Enter(GameContext gameContext) {
 
-        Debug.Log("GameBusiness Enter");
 
         UIApp.Panel_Cell_Open(gameContext.uiContext, 9);
     }

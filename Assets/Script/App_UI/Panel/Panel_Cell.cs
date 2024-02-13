@@ -7,9 +7,10 @@ public class Panel_Cell : MonoBehaviour {
     public void Ctor() { }
 
     public void Init(int count) {
-        
+
     }
     public void Show() {
+        Debug.Log("Panel_Cell Show");
         gameObject.SetActive(true);
     }
     public void Close() {

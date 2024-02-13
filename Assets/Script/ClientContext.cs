@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainContext : MonoBehaviour {
+public class MainContext  {
 
     public GameContext gameBusiness;
     public UIContext uiContext;
